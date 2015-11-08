@@ -15,6 +15,7 @@
  */
 package io.netty.example.echo;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -27,6 +28,7 @@ public class EchoServerHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
+    	
         ctx.write(msg);
     }
 
